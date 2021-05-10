@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Result Ddos</title>
+  <link rel="stylesheet" href="./static/css/style_index.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+  <h1 id="total"></h1> 
+  <span>Denial Of Service:</span>
+	<div id="content" style="width: 100%; line-height: 20px">
+       {% for val in data %}
+		<div class="prediction-item">
+       	        	<h4>{{ val }}</h4>
+		</div>
+       {% endfor %}
+       </div>
+        <script>
+                        var el = document.getElementById('content');
+                        var divHeight = el.offsetHeight
+                        var lineHeight = parseInt(el.style.lineHeight);
+                        var lines = divHeight / lineHeight;
+			var total = Math.ceil(lines);
+                        document.getElementById("total").innerHTML = 'Total Botnet has been Attacked: ' + total + ' bots';
+        </script>
+
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Patua+One' rel='stylesheet' type='text/css'>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./static/js/script.js"></script>
+
+</body>
+</html>

